@@ -9,4 +9,4 @@ To start, training in YOLOv7 is the first step. Follow: https://github.com/WongK
 ICDAR 2019: https://github.com/cndplab-founder/ICDAR2019_cTDaR
 
 ## Sample of inference
-![infer_result](plot_git/infer_result.jpg)
+![infer_result](plot_git/infer_result.png)
