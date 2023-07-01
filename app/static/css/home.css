@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+}
+
+
+.upload {
+    background: #84fab0;
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    height: auto;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.upload-section {
+    border: 3px dashed #0000FF;
+    border-radius: 3px;
+    padding: 25px 10px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-upload {
+    cursor: pointer;
+    font-size: 15px;
+    height: 57px;
+    line-height: 57px;
+    display: inline-block;
+    color: #fff;
+    padding: 0 65px;
+    background: #4e7efe;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-upload:hover {
+    background-color: #0000FF;
+}
+
+.upload-section p {
+    color: #949494;
+    font-size: 13px;
+}
+
+.tab-menu {
+    border: solid 1px #ddd;
+    border-bottom: none;
+    background: #f8fbff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    list-style: none;
+    height: 50px;
+    margin: 0px auto;
+    padding: 0px;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.tab-menu li {
+    float: left;
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0px 20px;
+}
+
+.tab-menu li a {
+    color: #999;
+    font-weight: bold;
+}
+
+.image {
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #e3f0ff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 195px;
+}
+
+.img-upload {
+    width: auto;
+    height: auto;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download button {
+    padding: 13px 65px;
+    text-transform: unset;
+    cursor: pointer;
+    border: 2px solid #2d8eff;
+    background: #2d8eff;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.download button:hover {
+    -color: #3377ff;
+}
+
+.tab-active,
+.tab-menu li:hover {
+    border: none;
+    background: #e3f0ff;
+}
+
+.tab-active a,
+.tab-menu li:hover a {
+    color: #2d8eff !important;
+}
+
+#about {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 50px;
+    background-color: #f6f7fa;
+}
+
+#about div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-top: 50px;
+}
+
+#about div img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+#myUploadImage {
+    display: none;
+}
+
+#result {
+    display: none;
+}
+
+#download {
+    display: none;
+}
+
+.error {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    color: red;
+}
+
+@media only screen and (min-width: 1280px) {
+    .navbar {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .upload {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+
+/* ============================================ */
+/* Pagination */
+/* ============================================ */
+
+#pagination a:hover {
+    cursor: pointer;
+}
+
+#pagination {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#pagination ul li {
+    display: flex;
+}
+
+#pagination ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(2,162,154,1) 100%);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#pagination ul li a:hover {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(4,255,241,1) 0%);
+    color: #000;
+}
+
+#pagination ul li.active a {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(4,255,241,1) 0%);
+    color: #000
+}
+
+#pagination ul li:first-child a {
+    border-radius: 10px 0 0 10px;
+}
+
+#pagination ul li:last-child a {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* ============================================ */
+/* Grid image */
+/* ============================================ */
+#gridImage img:hover {
+    cursor: pointer;
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+/* ============================================ */
+/* Scroll Back To Top Button */
+/* ============================================ */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    /* background-color: green;  */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(1,115,108,1) 0%);
+}
+
+#myBtn:hover {
+    /* background-color: #555; */
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(103,191,186,1) 0%);
+    -moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    color: #000
+}
