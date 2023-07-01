@@ -39,18 +39,24 @@ onnx.checker.check_model(onnx_model)
 ```
 
 ``` shell
-# Detect
+weights = "best.onnx"
+# Start ONNX Runtime session
 ort_session = ort.InferenceSession(weights, providers=providers)
 
 outname = [i.name for i in ort_session.get_outputs()]
 inname = [i.name for i in ort_session.get_inputs()]
 
-inp = {inname[0]: ifer_image}
+inp = {inname[0]: infer_image}
 
 # ONNX inference
 outputs = ort_session.run(outname, inp)[0]
 ```
 
+## Inference
+The inference phase and showing results are shown in code: [detect.py](https://github.com/HoangPham3003/Table-Detection-From-YOLOv7-to-Flask/blob/main/app/controller/detect.py)
+
+## Reference
+- A simple guild can be found here: [YOLOv7ONNXandTRT.ipynb](https://colab.research.google.com/github/WongKinYiu/yolov7/blob/main/tools/YOLOv7onnx.ipynb#scrollTo=yfZALjuo-_Md) 
 
 
 
